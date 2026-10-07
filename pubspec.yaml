@@ -1,0 +1,54 @@
+name: flutter_application_1
+description: "SEMS – Smart Energy Management System (Flutter)"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Networking
+  dio: ^5.11.1
+
+  # State management
+  provider: ^6.1.0
+
+  # Routing
+  go_router: ^14.8.1
+
+  # Persistence
+  shared_preferences: ^2.5.5
+  flutter_secure_storage: ^11.2.0
+
+  # Charts
+  fl_chart: ^0.70.2
+
+  # UI / Fonts
+  google_fonts: ^6.2.1
+
+  # QR Scanner
+  mobile_scanner: ^6.0.2
+
+  # PDF
+  pdf: ^3.11.1
+  printing: ^5.13.3
+
+  # URL Launcher (Stripe Checkout)
+  url_launcher: ^6.3.1
+
+  # Internationalization helpers
+  intl: ^0.19.0
+  flutter_dotenv: ^6.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
