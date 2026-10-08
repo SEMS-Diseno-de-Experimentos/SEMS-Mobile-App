@@ -1,4 +1,4 @@
-build_step: 4
-commit_ref: style(theme): define SemsColors design palette and color semantics
-author: Winnie Merino
-timestamp: 2026-10-08T18:39:27-05:00
+build_step: 5
+commit_ref: style(theme): add Sora typography and material 3 theme configurations
+author: dumbaskidd
+timestamp: 2026-10-08T13:52:56-05:00
