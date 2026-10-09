@@ -1,4 +1,4 @@
-build_step: 6
-commit_ref: feat(core): add Dio interceptor for automatic JWT bearer token injection
-author: Winnie Merino
-timestamp: 2026-10-09T20:05:25-05:00
+build_step: 7
+commit_ref: feat(widgets): implement SemsButton with loading state and variant styles
+author: Alexis Encalada Salazar
+timestamp: 2026-10-09T15:18:54-05:00
