@@ -1,4 +1,4 @@
-build_step: 12
-commit_ref: feat(layout): implement responsive AppShell wrapper and scaffold structure
-author: dumbaskidd
-timestamp: 2026-10-10T14:23:19-05:00
+build_step: 13
+commit_ref: feat(layout): add BottomNav component with animated icons
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-10T09:36:48-05:00
