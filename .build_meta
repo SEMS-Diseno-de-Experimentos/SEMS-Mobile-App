@@ -1,4 +1,4 @@
-build_step: 16
-commit_ref: feat(providers): create LanguageProvider for English and Spanish internationalization
-author: Alexis Encalada Salazar
-timestamp: 2026-10-10T18:15:15-05:00
+build_step: 17
+commit_ref: feat(auth): define User domain entity and role enums (Admin, Staff)
+author: dumbaskidd
+timestamp: 2026-10-10T13:28:44-05:00
