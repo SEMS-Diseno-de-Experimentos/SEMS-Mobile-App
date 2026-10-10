@@ -1,4 +1,4 @@
-build_step: 5
-commit_ref: style(theme): add Sora typography and material 3 theme configurations
-author: dumbaskidd
-timestamp: 2026-10-08T13:52:56-05:00
+build_step: 6
+commit_ref: feat(core): add Dio interceptor for automatic JWT bearer token injection
+author: Winnie Merino
+timestamp: 2026-10-09T20:05:25-05:00
