@@ -1,4 +1,4 @@
-build_step: 11
-commit_ref: feat(routes): configure GoRouter with initial path mappings and error page
-author: Nelson Romero
-timestamp: 2026-10-09T19:10:50-05:00
+build_step: 12
+commit_ref: feat(layout): implement responsive AppShell wrapper and scaffold structure
+author: dumbaskidd
+timestamp: 2026-10-10T14:23:19-05:00
