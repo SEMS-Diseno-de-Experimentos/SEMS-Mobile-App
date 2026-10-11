@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_application_1/core/providers/language_provider.dart';
 import 'package:flutter_application_1/features/alerts/data/repositories/alerts_repository_impl.dart';
+import 'package:flutter_application_1/features/analytics/data/repositories/analytics_repository_impl.dart';
 import 'package:flutter_application_1/features/alerts/domain/entities/alert.dart';
 import 'package:flutter_application_1/core/widgets/sems_card.dart';
 import 'package:flutter_application_1/core/widgets/sems_badge.dart';
@@ -26,6 +27,17 @@ class _AlertsScreenState extends State<AlertsScreen> {
   void initState() {
     super.initState();
     _loadData();
+    AnalyticsRepositoryImpl.dataChangeNotifier.addListener(_onDataChanged);
+  }
+
+  void _onDataChanged() {
+    if (mounted) _loadData();
+  }
+
+  @override
+  void dispose() {
+    AnalyticsRepositoryImpl.dataChangeNotifier.removeListener(_onDataChanged);
+    super.dispose();
   }
 
   Future<void> _loadData() async {
@@ -127,9 +139,9 @@ class _AlertsScreenState extends State<AlertsScreen> {
                               itemBuilder: (context, index) {
                                 final alert = _alerts![index];
                                 SemsBadgeVariant bVar;
-                                if (alert.severity == AlertSeverity.high) {
+                                if (alert.severity == AlertSeverity.critical || alert.severity == AlertSeverity.high) {
                                   bVar = SemsBadgeVariant.rose;
-                                } else if (alert.severity == AlertSeverity.medium) {
+                                } else if (alert.severity == AlertSeverity.warning || alert.severity == AlertSeverity.medium) {
                                   bVar = SemsBadgeVariant.amber;
                                 } else {
                                   bVar = SemsBadgeVariant.slate;
@@ -137,7 +149,10 @@ class _AlertsScreenState extends State<AlertsScreen> {
 
                                 IconData alertIcon;
                                 Color iconColor;
-                                if (alert.type == AlertType.anomaly) {
+                                if (alert.type == AlertType.demand) {
+                                  alertIcon = Icons.bolt;
+                                  iconColor = SemsColors.rose500;
+                                } else if (alert.type == AlertType.anomaly) {
                                   alertIcon = Icons.warning_amber_rounded;
                                   iconColor = SemsColors.amber500;
                                 } else if (alert.type == AlertType.threshold) {
@@ -158,7 +173,7 @@ class _AlertsScreenState extends State<AlertsScreen> {
                                         Container(
                                           padding: const EdgeInsets.all(8),
                                           decoration: BoxDecoration(
-                                            color: iconColor.withOpacity(0.1),
+                                            color: iconColor.withValues(alpha: 0.1),
                                             shape: BoxShape.circle,
                                           ),
                                           child: Icon(alertIcon, color: iconColor, size: 24),

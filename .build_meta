@@ -1,4 +1,4 @@
-build_step: 24
-commit_ref: feat(auth): connect RegisterScreen to AuthRepository register endpoint
-author: dumbaskidd
-timestamp: 2026-10-11T14:59:07-05:00
+build_step: 25
+commit_ref: feat(auth): add segment selection (RETAIL_CHAIN, INDEPENDENT) in registration
+author: Winnie Merino
+timestamp: 2026-10-11T09:12:36-05:00
