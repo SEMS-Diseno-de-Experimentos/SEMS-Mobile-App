@@ -1,4 +1,4 @@
-build_step: 19
-commit_ref: feat(auth): add user model JSON serialization and deserialization
-author: Nelson Romero
-timestamp: 2026-10-11T15:54:42-05:00
+build_step: 20
+commit_ref: feat(auth): create AuthProvider with ChangeNotifier state management
+author: dumbaskidd
+timestamp: 2026-10-11T10:07:11-05:00
