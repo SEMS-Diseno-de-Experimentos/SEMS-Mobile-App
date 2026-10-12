@@ -49,7 +49,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
         _prediction = futures[0] as BillPrediction;
         _recommendations = futures[1] as List<Recommendation>;
         _ranking = futures[2] as List<ConsumptionRanking>;
-        _sub = futures[3] as Subscription;
+        _sub = futures[3] as Subscription?;
         _loading = false;
       });
     } catch (e, stack) {
@@ -117,7 +117,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
                   borderRadius: BorderRadius.circular(SemsTheme.cardRadius),
                   boxShadow: [
                     BoxShadow(
-                      color: SemsColors.blue600.withOpacity(0.3),
+                      color: SemsColors.blue600.withValues(alpha: 0.3),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     ),

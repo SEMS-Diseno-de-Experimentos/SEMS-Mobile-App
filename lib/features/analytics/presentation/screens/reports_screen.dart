@@ -127,7 +127,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
-        child: (_sub?.planName == 'Básico' || _sub?.planName == 'Free' || _sub?.price == 0) ? Column(
+        child: (_sub == null || _sub!.planName == 'Básico' || _sub!.planName == 'Free' || _sub!.price == 0) ? Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
