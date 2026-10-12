@@ -5,7 +5,6 @@ import 'package:flutter_application_1/core/providers/theme_provider.dart';
 import 'package:flutter_application_1/features/auth/presentation/providers/auth_provider.dart';
 import 'package:flutter_application_1/core/widgets/sems_card.dart';
 import 'package:flutter_application_1/core/widgets/sems_button.dart';
-import 'package:flutter_application_1/core/utils/demo_seeder.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});

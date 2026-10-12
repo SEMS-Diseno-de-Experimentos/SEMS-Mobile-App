@@ -44,7 +44,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
         SubscriptionsRepositoryImpl.getInvoices(),
       ]);
       setState(() {
-        _sub = futures[0] as Subscription;
+        _sub = futures[0] as Subscription?;
         _plans = futures[1] as List<SubscriptionPlan>;
         _methods = futures[2] as List<PaymentMethod>;
         _invoices = futures[3] as List<Invoice>;

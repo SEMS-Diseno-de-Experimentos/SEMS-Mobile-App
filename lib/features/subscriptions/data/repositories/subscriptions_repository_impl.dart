@@ -1,37 +1,22 @@
 import 'package:flutter_application_1/core/config/api.dart';
 import 'package:flutter_application_1/features/subscriptions/domain/entities/billing.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_application_1/features/auth/data/repositories/auth_repository_impl.dart';
 
 class SubscriptionsRepositoryImpl {
   static const String _basePlan = '/api/v1/subscription-plans';
   static const String _baseSub = '/api/v1/subscriptions';
 
-  static Subscription? _mockSub = Subscription(
-    id: 'mock-sub',
-    planId: '2',
-    planName: 'Pro',
-    status: SubscriptionStatus.active,
-    renewalDate: DateTime.now().add(const Duration(days: 20)).toIso8601String(),
-    price: 79.0,
-    period: 'mes',
-  );
-
-  static final List<Invoice> _mockInvoices = [
-    Invoice(id: 'inv_1', amount: 79.0, status: 'PAID', date: DateTime.now().subtract(const Duration(days: 10)).toIso8601String(), description: 'Pago de suscripción Pro'),
-  ];
-
   static Future<List<SubscriptionPlan>> getPlans() async {
-    final response = await api.get('$_basePlan');
+    final response = await api.get(_basePlan);
     final data = response.data as List;
     return data.map((json) {
       return SubscriptionPlan(
-        id: json['PlanID']?.toString() ?? '',
-        name: json['Name']?.toString() ?? '',
-        price: double.tryParse(json['Price']?.toString() ?? '0') ?? 0.0,
-        period: json['BillingPeriod']?.toString() ?? 'mes',
+        id: (json['PlanID'] ?? json['plan_id'] ?? '').toString(),
+        name: (json['Name'] ?? json['name'] ?? '').toString(),
+        price: (json['Price'] as num?)?.toDouble() ?? double.tryParse(json['Price']?.toString() ?? '0') ?? 0.0,
+        period: (json['BillingPeriod'] ?? json['billing_period'] ?? 'mes').toString(),
         features: (json['PlanFeatures'] as List?)?.map((f) => f['FeatureName']?.toString() ?? f['FeatureValue']?.toString() ?? '').toList() ?? [],
-        recommended: json['Name']?.toString().toLowerCase().contains('pro') ?? false,
+        recommended: (json['Name'] ?? json['name'] ?? '').toString().toLowerCase().contains('pro'),
       );
     }).toList();
   }
@@ -41,21 +26,24 @@ class SubscriptionsRepositoryImpl {
     try {
       final response = await api.get('$_baseSub/users/${user.id}');
       final data = response.data as List;
-      final active = data.where((s) => s['Status']?.toString().toUpperCase() == 'ACTIVE').toList();
+      final active = data.where((s) {
+        final st = (s['Status'] ?? s['status'])?.toString().toUpperCase();
+        return st == 'ACTIVE' || st == 'TRIAL';
+      }).toList();
       if (active.isEmpty) return null;
-      
+
       final sub = active.first;
       final plans = await getPlans();
-      final planId = sub['PlanID']?.toString() ?? '';
+      final planId = (sub['PlanID'] ?? sub['plan_id'])?.toString() ?? '';
       final plan = plans.where((p) => p.id == planId).firstOrNull;
 
       return Subscription(
-        id: sub['SubscriptionID']?.toString() ?? '',
+        id: (sub['SubscriptionID'] ?? sub['subscription_id'])?.toString() ?? '',
         planId: planId,
-        planName: plan?.name ?? 'Plan',
+        planName: plan?.name ?? 'Plan Comercial',
         status: SubscriptionStatus.active,
-        renewalDate: sub['EndDate']?.toString() ?? DateTime.now().add(const Duration(days: 30)).toIso8601String(),
-        price: plan?.price ?? 0, // Inferido del plan
+        renewalDate: (sub['EndDate'] ?? sub['end_date'])?.toString() ?? DateTime.now().add(const Duration(days: 30)).toIso8601String(),
+        price: plan?.price ?? 0.0,
         period: plan?.period ?? 'mes',
       );
     } catch (e) {
@@ -69,11 +57,11 @@ class SubscriptionsRepositoryImpl {
       final response = await api.get('/api/v1/payment-methods/user/${user.id}');
       final data = response.data as List;
       return data.map((pm) => PaymentMethod(
-        id: pm['method_id']?.toString() ?? '',
-        brand: pm['brand']?.toString() ?? 'Card',
-        last4: pm['last4']?.toString() ?? '0000',
-        expMonth: int.tryParse(pm['exp_month']?.toString() ?? '1') ?? 1,
-        expYear: int.tryParse(pm['exp_year']?.toString() ?? '2030') ?? 2030,
+        id: (pm['payment_method_id'] ?? pm['method_id'] ?? pm['id'])?.toString() ?? '',
+        brand: pm['brand']?.toString() ?? pm['type']?.toString() ?? 'Card',
+        last4: pm['last4']?.toString() ?? '4242',
+        expMonth: int.tryParse(pm['exp_month']?.toString() ?? '12') ?? 12,
+        expYear: int.tryParse(pm['exp_year']?.toString() ?? '2028') ?? 2028,
         primary: pm['is_default'] == true,
       )).toList();
     } catch (e) {
@@ -87,11 +75,11 @@ class SubscriptionsRepositoryImpl {
       final response = await api.get('/api/v1/payments/user/${user.id}');
       final data = response.data as List;
       return data.map((inv) => Invoice(
-        id: inv['paymentId']?.toString() ?? '',
-        amount: double.tryParse(inv['amount']?.toString() ?? '0') ?? 0.0,
+        id: (inv['payment_id'] ?? inv['paymentId'] ?? inv['id'])?.toString() ?? '',
+        amount: (inv['amount'] as num?)?.toDouble() ?? 0.0,
         status: inv['status']?.toString() ?? 'PAID',
-        date: inv['createdAt']?.toString() ?? DateTime.now().toIso8601String(),
-        description: 'Pago de suscripción',
+        date: (inv['created_at'] ?? inv['createdAt'])?.toString() ?? DateTime.now().toIso8601String(),
+        description: 'Pago de suscripción SEMS',
       )).toList();
     } catch (e) {
       return [];
@@ -100,9 +88,8 @@ class SubscriptionsRepositoryImpl {
 
   static Future<void> subscribeToPlan(String planId, String planName, double amount, bool simulate) async {
     final user = await AuthRepositoryImpl.getMe();
-    
+
     if (simulate && amount > 0) {
-      // Simulate fake payment
       final methods = await getPaymentMethods();
       String pmId = '';
       if (methods.isEmpty) {
@@ -137,7 +124,7 @@ class SubscriptionsRepositoryImpl {
         'new_plan_id': planId,
       });
     } else {
-      await api.post('$_baseSub', data: {
+      await api.post(_baseSub, data: {
         'user_id': user.id,
         'plan_id': planId,
       });
