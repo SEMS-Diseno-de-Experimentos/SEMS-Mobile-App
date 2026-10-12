@@ -1,4 +1,4 @@
-build_step: 28
-commit_ref: feat(auth): implement VerifyAccountScreen for email activation tokens
-author: Nelson Romero
-timestamp: 2026-10-12T18:51:03-05:00
+build_step: 29
+commit_ref: test(auth): add unit tests for User entity mapping and JSON serialization
+author: dumbaskidd
+timestamp: 2026-10-12T13:04:32-05:00
