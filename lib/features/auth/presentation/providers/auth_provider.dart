@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_application_1/features/auth/domain/entities/user.dart';
 import 'package:flutter_application_1/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:flutter_application_1/core/config/api.dart';
+import 'package:flutter_application_1/core/utils/demo_seeder.dart';
 
 /// Auth provider — manages user session, login, register, and logout.
 /// Mirrors the web's AuthContext.tsx.
@@ -57,6 +58,9 @@ class AuthProvider extends ChangeNotifier {
     try {
       final res = await AuthRepositoryImpl.login(email, password);
       await _persist(res.token, res.user);
+      try {
+        await DemoSeeder.ensureSeeded(res.user.id);
+      } catch (_) {}
     } finally {
       _loading = false;
       notifyListeners();
@@ -81,6 +85,9 @@ class AuthProvider extends ChangeNotifier {
     try {
       final res = await AuthRepositoryImpl.register(email, password);
       await _persist(res.token, res.user);
+      try {
+        await DemoSeeder.seedData(res.user.id);
+      } catch (_) {}
     } finally {
       _loading = false;
       notifyListeners();
