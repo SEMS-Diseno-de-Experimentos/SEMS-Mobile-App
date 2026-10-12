@@ -6,6 +6,7 @@ import 'package:flutter_application_1/features/dashboard/data/repositories/dashb
 import 'package:flutter_application_1/features/dashboard/domain/entities/dashboard.dart';
 import 'package:flutter_application_1/features/monitoring/domain/entities/energy.dart';
 import 'package:flutter_application_1/features/analytics/domain/entities/analytics.dart';
+import 'package:flutter_application_1/features/analytics/data/repositories/analytics_repository_impl.dart';
 import 'package:flutter_application_1/core/widgets/kpi_card.dart';
 import 'package:flutter_application_1/core/widgets/sems_card.dart';
 import 'package:flutter_application_1/core/widgets/sems_badge.dart';
@@ -32,6 +33,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
   void initState() {
     super.initState();
     _loadData();
+    AnalyticsRepositoryImpl.dataChangeNotifier.addListener(_onDataChanged);
+  }
+
+  void _onDataChanged() {
+    if (mounted) _loadData();
+  }
+
+  @override
+  void dispose() {
+    AnalyticsRepositoryImpl.dataChangeNotifier.removeListener(_onDataChanged);
+    super.dispose();
   }
 
   Future<void> _loadData() async {

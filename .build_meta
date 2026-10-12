@@ -1,4 +1,4 @@
-build_step: 27
-commit_ref: feat(auth): implement ResetPasswordScreen with token validation
-author: dumbaskidd
-timestamp: 2026-10-12T11:38:34-05:00
+build_step: 28
+commit_ref: feat(auth): implement VerifyAccountScreen for email activation tokens
+author: Nelson Romero
+timestamp: 2026-10-12T18:51:03-05:00
