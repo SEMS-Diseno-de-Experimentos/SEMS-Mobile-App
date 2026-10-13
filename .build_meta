@@ -1,4 +1,4 @@
-build_step: 33
-commit_ref: refactor(core): optimize secure token caching to prevent async read latency
-author: dumbaskidd
-timestamp: 2026-10-13T17:56:28-05:00
+build_step: 34
+commit_ref: fix(auth): handle 401 unauthorized errors with automatic session purge
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-13T12:09:57-05:00
