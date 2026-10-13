@@ -1,4 +1,4 @@
-build_step: 36
-commit_ref: feat(devices): define Device entity and DeviceStatus enum
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-13T14:35:55-05:00
+build_step: 37
+commit_ref: feat(devices): define ConnectionProtocol enum (WiFi, Zigbee, Matter, Bluetooth)
+author: Alexis Encalada Salazar
+timestamp: 2026-10-13T09:48:24-05:00
