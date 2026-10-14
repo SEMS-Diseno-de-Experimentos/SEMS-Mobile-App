@@ -1,4 +1,4 @@
-build_step: 43
-commit_ref: feat(devices): implement AddDeviceDialog with form validation
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-14T15:06:18-05:00
+build_step: 44
+commit_ref: feat(devices): implement device registration API integration
+author: dumbaskidd
+timestamp: 2026-10-14T10:19:47-05:00
