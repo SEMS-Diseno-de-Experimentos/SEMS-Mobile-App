@@ -1,4 +1,4 @@
-build_step: 40
-commit_ref: feat(devices): add device status badges (active, inactive, maintenance)
-author: Nelson Romero
-timestamp: 2026-10-14T18:27:51-05:00
+build_step: 41
+commit_ref: feat(devices): add search filter by device name and brand
+author: Winnie Merino
+timestamp: 2026-10-14T13:40:20-05:00
