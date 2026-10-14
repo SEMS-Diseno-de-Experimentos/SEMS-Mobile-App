@@ -1,4 +1,4 @@
-build_step: 44
-commit_ref: feat(devices): implement device registration API integration
+build_step: 45
+commit_ref: feat(devices): add protocol selector in device onboarding
 author: dumbaskidd
-timestamp: 2026-10-14T10:19:47-05:00
+timestamp: 2026-10-14T17:32:16-05:00
