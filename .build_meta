@@ -1,4 +1,4 @@
-build_step: 51
-commit_ref: feat(monitoring): implement MonitoringScreen layout with real-time dials
-author: Alexis Encalada Salazar
-timestamp: 2026-10-15T11:50:10-05:00
+build_step: 52
+commit_ref: feat(monitoring): add active power (W), voltage (V) and current (A) cards
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-15T18:03:39-05:00
