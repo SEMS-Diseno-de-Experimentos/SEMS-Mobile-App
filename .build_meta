@@ -1,4 +1,4 @@
-build_step: 50
-commit_ref: feat(monitoring): implement EnergyRepository with readings query
-author: dumbaskidd
-timestamp: 2026-10-15T16:37:41-05:00
+build_step: 51
+commit_ref: feat(monitoring): implement MonitoringScreen layout with real-time dials
+author: Alexis Encalada Salazar
+timestamp: 2026-10-15T11:50:10-05:00
