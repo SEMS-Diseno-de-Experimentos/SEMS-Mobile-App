@@ -1,4 +1,4 @@
-build_step: 46
-commit_ref: feat(devices): add device detail modal displaying technical telemetry
-author: Alexis Encalada Salazar
-timestamp: 2026-10-14T12:45:45-05:00
+build_step: 47
+commit_ref: feat(devices): implement device deletion and confirmation dialog
+author: dumbaskidd
+timestamp: 2026-10-15T19:58:14-05:00
