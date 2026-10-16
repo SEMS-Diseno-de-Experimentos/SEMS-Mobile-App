@@ -1,4 +1,4 @@
-build_step: 55
-commit_ref: feat(monitoring): integrate 14-day energy consumption bar chart
-author: Winnie Merino
-timestamp: 2026-10-16T15:42:06-05:00
+build_step: 56
+commit_ref: feat(monitoring): add peak and off-peak hour indicators in energy chart
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-16T10:55:35-05:00
