@@ -1,4 +1,4 @@
-build_step: 57
-commit_ref: feat(monitoring): implement QRScannerModal for fast smart meter pairing
-author: dumbaskidd
-timestamp: 2026-10-16T17:08:04-05:00
+build_step: 58
+commit_ref: feat(monitoring): handle QR scanner permission checks and camera feed
+author: Nelson Romero
+timestamp: 2026-10-16T12:21:33-05:00
