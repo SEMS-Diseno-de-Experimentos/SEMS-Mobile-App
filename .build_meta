@@ -1,4 +1,4 @@
-build_step: 60
-commit_ref: feat(monitoring): display assigned zone and site in meter header
-author: dumbaskidd
-timestamp: 2026-10-17T14:47:31-05:00
+build_step: 61
+commit_ref: refactor(devices): extract device card into reusable widget component
+author: Winnie Merino
+timestamp: 2026-10-17T09:00:00-05:00
