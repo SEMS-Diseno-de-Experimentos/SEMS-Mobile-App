@@ -1,4 +1,4 @@
-build_step: 59
-commit_ref: feat(monitoring): add manual meter serial input fallback in QR modal
+build_step: 60
+commit_ref: feat(monitoring): display assigned zone and site in meter header
 author: dumbaskidd
-timestamp: 2026-10-16T19:34:02-05:00
+timestamp: 2026-10-17T14:47:31-05:00
