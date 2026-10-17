@@ -1,4 +1,4 @@
-build_step: 62
-commit_ref: style(monitoring): enhance chart tooltip formatting and date display
+build_step: 63
+commit_ref: fix(monitoring): handle empty energy readings with friendly placeholder
 author: dumbaskidd
-timestamp: 2026-10-17T16:13:29-05:00
+timestamp: 2026-10-17T11:26:58-05:00
