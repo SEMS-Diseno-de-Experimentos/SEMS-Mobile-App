@@ -1,4 +1,4 @@
-build_step: 63
-commit_ref: fix(monitoring): handle empty energy readings with friendly placeholder
-author: dumbaskidd
-timestamp: 2026-10-17T11:26:58-05:00
+build_step: 64
+commit_ref: test(monitoring): add unit tests for energy kwh calculation and cost mapping
+author: Nelson Romero
+timestamp: 2026-10-17T18:39:27-05:00
