@@ -1,4 +1,4 @@
-build_step: 70
-commit_ref: feat(dashboard): add Total Energy and Active Devices KPI cards
+build_step: 71
+commit_ref: feat(dashboard): integrate 14-day consumption chart on Dashboard
 author: Alexis Encalada Salazar
-timestamp: 2026-10-18T12:57:21-05:00
+timestamp: 2026-10-18T19:10:50-05:00
