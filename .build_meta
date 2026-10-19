@@ -1,4 +1,4 @@
-build_step: 73
-commit_ref: feat(dashboard): add anomaly severity badge (HIGH, MEDIUM, LOW)
-author: Winnie Merino
-timestamp: 2026-10-18T09:36:48-05:00
+build_step: 74
+commit_ref: feat(dashboard): implement pull-to-refresh on DashboardScreen
+author: dumbaskidd
+timestamp: 2026-10-19T16:49:17-05:00
