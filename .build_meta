@@ -1,4 +1,4 @@
-build_step: 79
-commit_ref: fix(dashboard): clamp saving percentage to valid 0-100 range
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-19T15:54:42-05:00
+build_step: 80
+commit_ref: docs: document device protocols and monitoring telemetry contracts
+author: dumbaskidd
+timestamp: 2026-10-19T10:07:11-05:00
