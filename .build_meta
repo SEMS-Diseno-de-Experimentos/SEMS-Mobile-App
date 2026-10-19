@@ -1,4 +1,4 @@
-build_step: 78
-commit_ref: refactor(dashboard): parallelize dashboard repository queries with Future.wait
-author: dumbaskidd
-timestamp: 2026-10-19T20:41:13-05:00
+build_step: 79
+commit_ref: fix(dashboard): clamp saving percentage to valid 0-100 range
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-19T15:54:42-05:00
