@@ -1,4 +1,4 @@
-build_step: 76
-commit_ref: fix(dashboard): format currency values with 2 decimal places in Soles
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-19T18:15:15-05:00
+build_step: 77
+commit_ref: style(dashboard): improve responsive layout on tablet and desktop screens
+author: dumbaskidd
+timestamp: 2026-10-19T13:28:44-05:00
