@@ -1,4 +1,4 @@
-build_step: 89
-commit_ref: feat(analytics): implement recommendation detail dialog with action steps
+build_step: 90
+commit_ref: feat(analytics): implement Apply Recommendation action with persistent state
 author: dumbaskidd
-timestamp: 2026-10-21T13:04:32-05:00
+timestamp: 2026-10-21T20:17:01-05:00
