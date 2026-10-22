@@ -1,4 +1,4 @@
-build_step: 98
-commit_ref: feat(alerts): define Alert entity and AlertSeverity, AlertStatus enums
+build_step: 99
+commit_ref: feat(alerts): implement AlertsRepository with getAlerts endpoint
 author: dumbaskidd
-timestamp: 2026-10-22T16:01:53-05:00
+timestamp: 2026-10-22T11:14:22-05:00
