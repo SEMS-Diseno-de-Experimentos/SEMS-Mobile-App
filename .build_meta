@@ -1,4 +1,4 @@
-build_step: 111
-commit_ref: test(alerts): add unit tests for alert filtering and severity comparisons
+build_step: 112
+commit_ref: feat(subscriptions): define Plan and Subscription domain entities
 author: Nelson Romero
-timestamp: 2026-10-24T11:50:10-05:00
+timestamp: 2026-10-24T18:03:39-05:00
