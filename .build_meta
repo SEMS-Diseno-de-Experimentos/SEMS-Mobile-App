@@ -1,4 +1,4 @@
-build_step: 101
-commit_ref: feat(alerts): add filter chips for All, Active, Acknowledged and Resolved
-author: Alexis Encalada Salazar
-timestamp: 2026-10-23T13:40:20-05:00
+build_step: 102
+commit_ref: feat(alerts): implement alert card with device name and severity indicator
+author: dumbaskidd
+timestamp: 2026-10-23T20:53:49-05:00
