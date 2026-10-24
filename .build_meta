@@ -1,4 +1,4 @@
-build_step: 110
-commit_ref: feat(alerts): implement out-of-schedule consumption critical alert
-author: dumbaskidd
-timestamp: 2026-10-24T16:37:41-05:00
+build_step: 111
+commit_ref: test(alerts): add unit tests for alert filtering and severity comparisons
+author: Nelson Romero
+timestamp: 2026-10-24T11:50:10-05:00
