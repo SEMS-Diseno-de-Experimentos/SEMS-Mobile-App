@@ -1,4 +1,4 @@
-build_step: 112
-commit_ref: feat(subscriptions): define Plan and Subscription domain entities
-author: Nelson Romero
-timestamp: 2026-10-24T18:03:39-05:00
+build_step: 113
+commit_ref: feat(subscriptions): implement SubscriptionsRepository with active plans
+author: dumbaskidd
+timestamp: 2026-10-24T13:16:08-05:00
