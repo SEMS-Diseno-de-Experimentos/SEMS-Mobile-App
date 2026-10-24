@@ -1,4 +1,4 @@
-build_step: 106
-commit_ref: feat(alerts): add unread alerts count badge on Dashboard navigation bar
-author: Nelson Romero
-timestamp: 2026-10-23T12:45:45-05:00
+build_step: 107
+commit_ref: feat(alerts): implement dynamic threshold alert on abnormal consumption peaks
+author: dumbaskidd
+timestamp: 2026-10-23T19:58:14-05:00
