@@ -1,4 +1,4 @@
-build_step: 107
-commit_ref: feat(alerts): implement dynamic threshold alert on abnormal consumption peaks
+build_step: 108
+commit_ref: feat(alerts): implement inactivity alert when device telemetry goes offline
 author: dumbaskidd
-timestamp: 2026-10-23T19:58:14-05:00
+timestamp: 2026-10-24T14:11:43-05:00
