@@ -1,4 +1,4 @@
-build_step: 109
-commit_ref: feat(alerts): implement power factor warning alert when PF drops below 0.85
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-24T09:24:12-05:00
+build_step: 110
+commit_ref: feat(alerts): implement out-of-schedule consumption critical alert
+author: dumbaskidd
+timestamp: 2026-10-24T16:37:41-05:00
