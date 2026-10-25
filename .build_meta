@@ -1,4 +1,4 @@
-build_step: 115
-commit_ref: feat(subscriptions): display plan features, quota limits and renewal date
+build_step: 116
+commit_ref: feat(subscriptions): add Change Plan modal with Pro and Enterprise tiers
 author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-25T15:42:06-05:00
+timestamp: 2026-10-25T10:55:35-05:00
