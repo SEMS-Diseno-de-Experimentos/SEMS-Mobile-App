@@ -1,4 +1,4 @@
-build_step: 113
-commit_ref: feat(subscriptions): implement SubscriptionsRepository with active plans
+build_step: 114
+commit_ref: feat(subscriptions): implement SubscriptionScreen displaying current tier
 author: dumbaskidd
-timestamp: 2026-10-24T13:16:08-05:00
+timestamp: 2026-10-24T20:29:37-05:00
