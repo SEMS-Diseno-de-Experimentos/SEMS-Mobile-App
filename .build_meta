@@ -1,4 +1,4 @@
-build_step: 114
-commit_ref: feat(subscriptions): implement SubscriptionScreen displaying current tier
-author: dumbaskidd
-timestamp: 2026-10-24T20:29:37-05:00
+build_step: 115
+commit_ref: feat(subscriptions): display plan features, quota limits and renewal date
+author: Elias Daniel Ramos Cerdan
+timestamp: 2026-10-25T15:42:06-05:00
