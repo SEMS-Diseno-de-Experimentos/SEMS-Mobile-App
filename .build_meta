@@ -1,4 +1,4 @@
-build_step: 116
-commit_ref: feat(subscriptions): add Change Plan modal with Pro and Enterprise tiers
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-25T10:55:35-05:00
+build_step: 117
+commit_ref: feat(subscriptions): integrate mock payment checkout flow with confirmation
+author: dumbaskidd
+timestamp: 2026-10-25T17:08:04-05:00
