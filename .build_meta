@@ -1,4 +1,4 @@
-build_step: 119
-commit_ref: feat(settings): implement SettingsScreen with user profile summary
+build_step: 120
+commit_ref: feat(settings): add Edit Profile dialog to update user full name
 author: dumbaskidd
-timestamp: 2026-10-25T19:34:02-05:00
+timestamp: 2026-10-25T14:47:31-05:00
