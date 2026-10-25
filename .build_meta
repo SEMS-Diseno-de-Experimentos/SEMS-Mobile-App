@@ -1,4 +1,4 @@
-build_step: 120
-commit_ref: feat(settings): add Edit Profile dialog to update user full name
-author: dumbaskidd
-timestamp: 2026-10-25T14:47:31-05:00
+build_step: 121
+commit_ref: feat(settings): implement language selector toggle in settings
+author: Winnie Merino
+timestamp: 2026-10-25T09:00:00-05:00
