@@ -1,4 +1,4 @@
-build_step: 124
-commit_ref: feat(settings): add App Version and Terms & Conditions informational tile
-author: Winnie Merino
-timestamp: 2026-10-26T18:39:27-05:00
+build_step: 125
+commit_ref: fix(settings): persist custom user name in SharedPreferences
+author: dumbaskidd
+timestamp: 2026-10-26T13:52:56-05:00
