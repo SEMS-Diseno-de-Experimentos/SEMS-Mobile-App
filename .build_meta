@@ -1,4 +1,4 @@
-build_step: 122
-commit_ref: feat(settings): implement dark mode / light mode radio selector
+build_step: 123
+commit_ref: feat(settings): implement logout button with token clearing and redirect
 author: dumbaskidd
-timestamp: 2026-10-26T16:13:29-05:00
+timestamp: 2026-10-26T11:26:58-05:00
