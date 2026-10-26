@@ -1,4 +1,4 @@
-build_step: 118
-commit_ref: feat(subscriptions): display payment history and invoice download buttons
-author: Winnie Merino
-timestamp: 2026-10-25T12:21:33-05:00
+build_step: 119
+commit_ref: feat(settings): implement SettingsScreen with user profile summary
+author: dumbaskidd
+timestamp: 2026-10-25T19:34:02-05:00
