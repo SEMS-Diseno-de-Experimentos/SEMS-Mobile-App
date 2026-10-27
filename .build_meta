@@ -1,4 +1,4 @@
-build_step: 129
-commit_ref: fix(analytics): avoid negative projected costs when multiple savings applied
-author: dumbaskidd
-timestamp: 2026-10-27T17:44:52-05:00
+build_step: 130
+commit_ref: docs: document analytics prediction formula and alert rule definitions
+author: Alexis Encalada Salazar
+timestamp: 2026-10-27T12:57:21-05:00
