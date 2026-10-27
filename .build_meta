@@ -1,4 +1,4 @@
-build_step: 131
-commit_ref: feat(settings): implement HouseholdScreen ('Mi Organización') layout
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-27T19:10:50-05:00
+build_step: 132
+commit_ref: feat(settings): display organization legal name and active plan banner
+author: dumbaskidd
+timestamp: 2026-10-27T14:23:19-05:00
