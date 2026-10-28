@@ -1,4 +1,4 @@
-build_step: 134
-commit_ref: feat(settings): persist user consumption goal in SharedPreferences and API
+build_step: 135
+commit_ref: feat(settings): add electricity tariff configuration per kWh (BT5B / BT3)
 author: dumbaskidd
-timestamp: 2026-10-27T16:49:17-05:00
+timestamp: 2026-10-28T11:02:46-05:00
