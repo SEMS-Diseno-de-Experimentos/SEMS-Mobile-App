@@ -1,4 +1,4 @@
-build_step: 137
-commit_ref: feat(alerts): dynamically evaluate consumption limit against organization goal
+build_step: 138
+commit_ref: feat(alerts): trigger critical alert when accumulated kWh exceeds goal
 author: dumbaskidd
-timestamp: 2026-10-28T13:28:44-05:00
+timestamp: 2026-10-28T20:41:13-05:00
