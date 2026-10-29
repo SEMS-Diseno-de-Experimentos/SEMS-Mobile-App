@@ -1,4 +1,4 @@
-build_step: 141
-commit_ref: feat(utils): create DemoSeeder utility to provision realistic demo accounts
+build_step: 142
+commit_ref: feat(utils): generate random organization and headquarters site in DemoSeeder
 author: Nelson Romero
-timestamp: 2026-10-28T17:20:40-05:00
+timestamp: 2026-10-29T12:33:09-05:00
