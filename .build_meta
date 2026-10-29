@@ -1,4 +1,4 @@
-build_step: 146
-commit_ref: feat(utils): randomize device brands (Samsung, LG, Philips, Daikin, Carrier)
-author: Winnie Merino
-timestamp: 2026-10-29T16:25:05-05:00
+build_step: 147
+commit_ref: feat(utils): randomize connection protocols (WiFi, Zigbee, Matter, BLE)
+author: dumbaskidd
+timestamp: 2026-10-29T11:38:34-05:00
