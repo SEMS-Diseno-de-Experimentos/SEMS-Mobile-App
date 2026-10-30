@@ -1,4 +1,4 @@
-build_step: 142
-commit_ref: feat(utils): generate random organization and headquarters site in DemoSeeder
-author: Nelson Romero
-timestamp: 2026-10-29T12:33:09-05:00
+build_step: 143
+commit_ref: feat(utils): generate smart meter with randomized serial and firmware
+author: dumbaskidd
+timestamp: 2026-10-29T19:46:38-05:00
