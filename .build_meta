@@ -1,4 +1,4 @@
-build_step: 152
-commit_ref: feat(utils): assign default Pro subscription plan during seeding
+build_step: 153
+commit_ref: feat(utils): parallelize reading insertion using Future.wait for fast seeding
 author: dumbaskidd
-timestamp: 2026-10-30T10:43:59-05:00
+timestamp: 2026-10-30T17:56:28-05:00
