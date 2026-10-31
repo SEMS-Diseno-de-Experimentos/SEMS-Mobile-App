@@ -1,4 +1,4 @@
-build_step: 158
-commit_ref: feat(i18n): expand English translation dictionary with all app terms
+build_step: 159
+commit_ref: feat(i18n): add localized string helper t(es, en) in LanguageProvider
 author: dumbaskidd
-timestamp: 2026-10-31T16:01:53-05:00
+timestamp: 2026-10-31T11:14:22-05:00
