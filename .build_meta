@@ -1,4 +1,4 @@
-build_step: 154
-commit_ref: feat(utils): format all DateTime instances to UTC for PostgreSQL compatibility
-author: Alexis Encalada Salazar
-timestamp: 2026-10-30T12:09:57-05:00
+build_step: 155
+commit_ref: refactor(auth): invoke DemoSeeder automatically upon new user registration
+author: dumbaskidd
+timestamp: 2026-10-30T19:22:26-05:00
