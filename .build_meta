@@ -1,4 +1,4 @@
-build_step: 161
-commit_ref: feat(i18n): translate Devices screen, filter chips and protocol tags
-author: Elias Daniel Ramos Cerdan
-timestamp: 2026-10-31T13:40:20-05:00
+build_step: 162
+commit_ref: feat(i18n): translate Monitoring dials, meter details and QR scanner
+author: dumbaskidd
+timestamp: 2026-10-31T20:53:49-05:00
