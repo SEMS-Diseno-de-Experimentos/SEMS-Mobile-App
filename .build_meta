@@ -1,4 +1,4 @@
-build_step: 163
-commit_ref: feat(i18n): translate Analytics forecasts, recommendations and reports
-author: Alexis Encalada Salazar
-timestamp: 2026-11-01T15:06:18-05:00
+build_step: 164
+commit_ref: feat(i18n): translate Alerts descriptions and filter categories
+author: dumbaskidd
+timestamp: 2026-11-01T10:19:47-05:00
