@@ -1,4 +1,4 @@
-build_step: 181
-commit_ref: feat(dashboard): display active goal exceeded anomaly under 'Needs attention'
+build_step: 182
+commit_ref: feat(dashboard): use real accumulated readings instead of hardcoded 20 kWh
 author: dumbaskidd
-timestamp: 2026-11-03T09:00:00-05:00
+timestamp: 2026-11-03T16:13:29-05:00
