@@ -1,4 +1,4 @@
-build_step: 180
-commit_ref: feat(dashboard): update saving amount and saving percentage dynamically
+build_step: 181
+commit_ref: feat(dashboard): display active goal exceeded anomaly under 'Needs attention'
 author: dumbaskidd
-timestamp: 2026-11-03T14:47:31-05:00
+timestamp: 2026-11-03T09:00:00-05:00
