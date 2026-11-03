@@ -1,4 +1,4 @@
-build_step: 177
-commit_ref: feat(analytics): invoke notifyDataChanged when recommendation is applied
+build_step: 178
+commit_ref: feat(dashboard): listen to dataChangeNotifier to refresh KPIs immediately
 author: dumbaskidd
-timestamp: 2026-11-03T17:08:04-05:00
+timestamp: 2026-11-03T12:21:33-05:00
