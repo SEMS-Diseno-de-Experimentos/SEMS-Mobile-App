@@ -1,4 +1,4 @@
-build_step: 179
-commit_ref: feat(dashboard): subtract applied AI recommendations from projected cost
+build_step: 180
+commit_ref: feat(dashboard): update saving amount and saving percentage dynamically
 author: dumbaskidd
-timestamp: 2026-11-03T19:34:02-05:00
+timestamp: 2026-11-03T14:47:31-05:00
