@@ -1,4 +1,4 @@
-build_step: 186
-commit_ref: feat(alerts): ensure alert message shows exact current kWh matching dashboard
+build_step: 187
+commit_ref: fix(auth): normalize segment to RETAIL_CHAIN by default in registration
 author: dumbaskidd
-timestamp: 2026-11-04T20:05:25-05:00
+timestamp: 2026-11-04T15:18:54-05:00
