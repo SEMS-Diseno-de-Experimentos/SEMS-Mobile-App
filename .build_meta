@@ -1,4 +1,4 @@
-build_step: 178
-commit_ref: feat(dashboard): listen to dataChangeNotifier to refresh KPIs immediately
+build_step: 179
+commit_ref: feat(dashboard): subtract applied AI recommendations from projected cost
 author: dumbaskidd
-timestamp: 2026-11-03T12:21:33-05:00
+timestamp: 2026-11-03T19:34:02-05:00
