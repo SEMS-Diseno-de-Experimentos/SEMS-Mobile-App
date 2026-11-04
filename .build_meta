@@ -1,4 +1,4 @@
-build_step: 187
-commit_ref: fix(auth): normalize segment to RETAIL_CHAIN by default in registration
+build_step: 188
+commit_ref: fix(auth): extract specific validation error message on HTTP 400 responses
 author: dumbaskidd
-timestamp: 2026-11-04T15:18:54-05:00
+timestamp: 2026-11-04T10:31:23-05:00
