@@ -1,4 +1,4 @@
-build_step: 184
-commit_ref: feat(alerts): listen to dataChangeNotifier for instant alert list reload
+build_step: 185
+commit_ref: feat(alerts): prioritize local preference consumption_goal over backend default
 author: dumbaskidd
-timestamp: 2026-11-04T18:39:27-05:00
+timestamp: 2026-11-04T13:52:56-05:00
