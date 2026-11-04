@@ -1,4 +1,4 @@
-build_step: 183
-commit_ref: feat(settings): trigger notifyDataChanged when energy goal is saved
+build_step: 184
+commit_ref: feat(alerts): listen to dataChangeNotifier for instant alert list reload
 author: dumbaskidd
-timestamp: 2026-11-04T11:26:58-05:00
+timestamp: 2026-11-04T18:39:27-05:00
