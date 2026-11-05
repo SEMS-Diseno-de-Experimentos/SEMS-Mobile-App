@@ -1,4 +1,4 @@
-build_step: 192
-commit_ref: fix(seeder): send camelCase userId and planId to subscriptions endpoint
+build_step: 193
+commit_ref: refactor(core): optimize Dio connection and receive timeouts to 10 seconds
 author: dumbaskidd
-timestamp: 2026-11-05T14:23:19-05:00
+timestamp: 2026-11-05T09:36:48-05:00
