@@ -1,4 +1,4 @@
-build_step: 195
-commit_ref: style(layout): add platform-aware bottom navigation safe area insets
+build_step: 196
+commit_ref: fix(web): add --web-port=5000 support in start_mobile.bat script
 author: dumbaskidd
-timestamp: 2026-11-05T11:02:46-05:00
+timestamp: 2026-11-05T18:15:15-05:00
