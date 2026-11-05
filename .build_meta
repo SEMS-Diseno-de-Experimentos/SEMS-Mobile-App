@@ -1,4 +1,4 @@
-build_step: 191
-commit_ref: fix(seeder): pass numeric tariff 0.78 instead of string BT3 to bill predictions
+build_step: 192
+commit_ref: fix(seeder): send camelCase userId and planId to subscriptions endpoint
 author: dumbaskidd
-timestamp: 2026-11-05T19:10:50-05:00
+timestamp: 2026-11-05T14:23:19-05:00
