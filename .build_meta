@@ -1,4 +1,4 @@
-build_step: 185
-commit_ref: feat(alerts): prioritize local preference consumption_goal over backend default
+build_step: 186
+commit_ref: feat(alerts): ensure alert message shows exact current kWh matching dashboard
 author: dumbaskidd
-timestamp: 2026-11-04T13:52:56-05:00
+timestamp: 2026-11-04T20:05:25-05:00
