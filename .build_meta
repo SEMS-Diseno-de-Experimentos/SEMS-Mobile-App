@@ -1,4 +1,4 @@
-build_step: 194
-commit_ref: style(core): refine Sora font loading and fallback font family list
+build_step: 195
+commit_ref: style(layout): add platform-aware bottom navigation safe area insets
 author: dumbaskidd
-timestamp: 2026-11-05T16:49:17-05:00
+timestamp: 2026-11-05T11:02:46-05:00
