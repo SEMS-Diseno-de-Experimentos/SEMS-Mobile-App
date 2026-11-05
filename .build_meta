@@ -1,4 +1,4 @@
-build_step: 189
-commit_ref: fix(auth): clean up token on 401 unauthorized to prevent stale sessions
+build_step: 190
+commit_ref: fix(seeder): fix business_type from RETAIL to valid SUPERMARKET enum
 author: dumbaskidd
-timestamp: 2026-11-04T17:44:52-05:00
+timestamp: 2026-11-05T12:57:21-05:00
