@@ -1,4 +1,4 @@
-build_step: 193
-commit_ref: refactor(core): optimize Dio connection and receive timeouts to 10 seconds
+build_step: 194
+commit_ref: style(core): refine Sora font loading and fallback font family list
 author: dumbaskidd
-timestamp: 2026-11-05T09:36:48-05:00
+timestamp: 2026-11-05T16:49:17-05:00
