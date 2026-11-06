@@ -1,4 +1,4 @@
-build_step: 196
-commit_ref: fix(web): add --web-port=5000 support in start_mobile.bat script
+build_step: 197
+commit_ref: feat(web): add responsive centering and maxWidth constraints on web view
 author: dumbaskidd
-timestamp: 2026-11-05T18:15:15-05:00
+timestamp: 2026-11-06T13:28:44-05:00
