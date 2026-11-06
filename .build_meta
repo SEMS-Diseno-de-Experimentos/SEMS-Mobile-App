@@ -1,4 +1,4 @@
-build_step: 201
-commit_ref: perf(dashboard): memoize consumption chart points to prevent redraw lag
+build_step: 202
+commit_ref: perf(devices): use const constructors across device and alert cards
 author: dumbaskidd
-timestamp: 2026-11-06T17:20:40-05:00
+timestamp: 2026-11-06T12:33:09-05:00
