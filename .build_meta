@@ -1,4 +1,4 @@
-build_step: 190
-commit_ref: fix(seeder): fix business_type from RETAIL to valid SUPERMARKET enum
+build_step: 191
+commit_ref: fix(seeder): pass numeric tariff 0.78 instead of string BT3 to bill predictions
 author: dumbaskidd
-timestamp: 2026-11-05T12:57:21-05:00
+timestamp: 2026-11-05T19:10:50-05:00
