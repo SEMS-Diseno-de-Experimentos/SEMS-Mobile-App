@@ -1,4 +1,4 @@
-build_step: 198
-commit_ref: fix(devices): handle null brand and model gracefully in device list item
+build_step: 199
+commit_ref: fix(monitoring): handle devices with zero readings without throwing exception
 author: dumbaskidd
-timestamp: 2026-11-06T20:41:13-05:00
+timestamp: 2026-11-06T15:54:42-05:00
