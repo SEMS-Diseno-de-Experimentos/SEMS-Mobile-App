@@ -1,4 +1,4 @@
-build_step: 200
-commit_ref: test(flow): execute full integration suite against local backend - all tests pass
+build_step: 201
+commit_ref: perf(dashboard): memoize consumption chart points to prevent redraw lag
 author: dumbaskidd
-timestamp: 2026-11-06T10:07:11-05:00
+timestamp: 2026-11-06T17:20:40-05:00
