@@ -1,4 +1,4 @@
-build_step: 199
-commit_ref: fix(monitoring): handle devices with zero readings without throwing exception
+build_step: 200
+commit_ref: test(flow): execute full integration suite against local backend - all tests pass
 author: dumbaskidd
-timestamp: 2026-11-06T15:54:42-05:00
+timestamp: 2026-11-06T10:07:11-05:00
