@@ -1,4 +1,4 @@
-build_step: 206
-commit_ref: fix(settings): trim whitespace from goal input text field before parsing
+build_step: 207
+commit_ref: feat(settings): allow resetting limit alert status when new goal is saved
 author: dumbaskidd
-timestamp: 2026-11-07T16:25:05-05:00
+timestamp: 2026-11-07T11:38:34-05:00
