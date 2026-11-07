@@ -1,4 +1,4 @@
-build_step: 207
-commit_ref: feat(settings): allow resetting limit alert status when new goal is saved
+build_step: 208
+commit_ref: refactor(auth): ensure decodeToken supports nameidentifier and userId claims
 author: dumbaskidd
-timestamp: 2026-11-07T11:38:34-05:00
+timestamp: 2026-11-07T18:51:03-05:00
