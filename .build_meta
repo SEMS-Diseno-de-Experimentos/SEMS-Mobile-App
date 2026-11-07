@@ -1,4 +1,4 @@
-build_step: 208
-commit_ref: refactor(auth): ensure decodeToken supports nameidentifier and userId claims
+build_step: 209
+commit_ref: refactor(auth): ensure getMe falls back to decoded token if offline
 author: dumbaskidd
-timestamp: 2026-11-07T18:51:03-05:00
+timestamp: 2026-11-07T13:04:32-05:00
