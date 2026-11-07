@@ -1,4 +1,4 @@
-build_step: 203
-commit_ref: perf(images): compress and optimize app icon and logo assets
+build_step: 204
+commit_ref: refactor(core): ensure all dates serialized to ISO8601 UTC format
 author: dumbaskidd
-timestamp: 2026-11-06T19:46:38-05:00
+timestamp: 2026-11-07T14:59:07-05:00
