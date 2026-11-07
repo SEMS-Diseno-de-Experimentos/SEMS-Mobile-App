@@ -1,4 +1,4 @@
-build_step: 197
-commit_ref: feat(web): add responsive centering and maxWidth constraints on web view
+build_step: 198
+commit_ref: fix(devices): handle null brand and model gracefully in device list item
 author: dumbaskidd
-timestamp: 2026-11-06T13:28:44-05:00
+timestamp: 2026-11-06T20:41:13-05:00
