@@ -54,8 +54,30 @@ class _DevicesScreenState extends State<DevicesScreen> {
     final extCodeCtrl = TextEditingController(
       text: device?.externalDeviceCode ?? '',
     );
-    String typeVal = device?.deviceType ?? 'SMART_PLUG';
-    String connVal = device?.connectionProtocol ?? 'WIFI';
+    const validTypes = [
+      'SMART_PLUG',
+      'HVAC',
+      'AIR_CONDITIONER',
+      'REFRIGERATOR',
+      'WATER_HEATER',
+      'TV',
+      'WASHING_MACHINE',
+      'MICROWAVE',
+      'LIGHTING',
+      'REFRIGERATION',
+      'MACHINERY',
+      'ELECTRONICS',
+      'APPLIANCE',
+      'OTHER',
+    ];
+    String rawType = (device?.deviceType ?? 'SMART_PLUG').toUpperCase();
+    String typeVal = validTypes.contains(rawType) ? rawType : 'OTHER';
+
+    const validConns = ['WIFI', 'BLUETOOTH', 'ZIGBEE', 'MATTER'];
+    String rawConn = (device?.connectionProtocol ?? 'WIFI').toUpperCase();
+    if (rawConn.contains('BLE')) rawConn = 'BLUETOOTH';
+    String connVal = validConns.contains(rawConn) ? rawConn : 'WIFI';
+
     DeviceStatus statusVal = device?.status ?? DeviceStatus.active;
 
     showDialog(
@@ -86,26 +108,11 @@ class _DevicesScreenState extends State<DevicesScreen> {
                       decoration: InputDecoration(
                         labelText: lang.t("Tipo", "Type"),
                       ),
-                      items:
-                          [
-                                'SMART_PLUG',
-                                'HVAC',
-                                'AIR_CONDITIONER',
-                                'REFRIGERATOR',
-                                'WATER_HEATER',
-                                'TV',
-                                'WASHING_MACHINE',
-                                'MICROWAVE',
-                                'LIGHTING',
-                                'REFRIGERATION',
-                                'MACHINERY',
-                                'OTHER',
-                              ]
-                              .map(
-                                (e) =>
-                                    DropdownMenuItem(value: e, child: Text(e)),
-                              )
-                              .toList(),
+                      items: validTypes
+                          .map(
+                            (e) => DropdownMenuItem(value: e, child: Text(e)),
+                          )
+                          .toList(),
                       onChanged: (v) => setStateModal(() => typeVal = v!),
                     ),
                     const SizedBox(height: 12),
@@ -114,7 +121,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
                       decoration: InputDecoration(
                         labelText: lang.t("Conexión", "Connection"),
                       ),
-                      items: ['WIFI', 'BLUETOOTH', 'ZIGBEE', 'MATTER']
+                      items: validConns
                           .map(
                             (e) => DropdownMenuItem(value: e, child: Text(e)),
                           )
@@ -131,6 +138,8 @@ class _DevicesScreenState extends State<DevicesScreen> {
                         DropdownMenuItem(value: DeviceStatus.active, child: Text(lang.t("Activo", "Active"))),
                         DropdownMenuItem(value: DeviceStatus.inactive, child: Text(lang.t("Inactivo", "Inactive"))),
                         DropdownMenuItem(value: DeviceStatus.disconnected, child: Text(lang.t("Desconectado", "Disconnected"))),
+                        DropdownMenuItem(value: DeviceStatus.maintenance, child: Text(lang.t("Mantenimiento", "Maintenance"))),
+                        DropdownMenuItem(value: DeviceStatus.removed, child: Text(lang.t("Retirado", "Removed"))),
                       ],
                       onChanged: (v) => setStateModal(() => statusVal = v!),
                     ),

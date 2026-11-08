@@ -13,12 +13,19 @@ class EnergyRepositoryImpl {
     try {
       final user = await AuthRepositoryImpl.getMe();
       final res = await api.get('$_metersBase/user/${user.id}');
-      var data = (res.data as List).map((m) => EnergyMeter(
-        meterId: m['id'],
-        name: m['brand'] + ' ' + m['model'],
-        active: m['status'] == 'ACTIVE',
-        lastReadingKwh: 0.0,
-      )).toList();
+      var data = (res.data as List).map((m) {
+        final brand = m['brand']?.toString() ?? 'SEMS';
+        final model = m['model']?.toString() ?? m['meter_serial']?.toString() ?? 'Meter';
+        final statusStr = m['status']?.toString().toUpperCase() ?? '';
+        final isActive = statusStr == 'ACTIVE' || statusStr == '0';
+        final lastKwh = (m['max_power_watts'] as num?)?.toDouble() ?? 0.0;
+        return EnergyMeter(
+          meterId: m['id']?.toString() ?? '',
+          name: '$brand $model',
+          active: isActive,
+          lastReadingKwh: lastKwh,
+        );
+      }).toList();
       if (data.isNotEmpty) return data;
       throw Exception();
     } catch (_) {
@@ -27,7 +34,7 @@ class EnergyRepositoryImpl {
       if (activeDevices.isEmpty) return [];
 
       return [
-        EnergyMeter(meterId: 'mock-meter', name: 'Acme SmartMeter X1', active: true, lastReadingKwh: activeDevices.length * 20.0),
+        EnergyMeter(meterId: 'mock-meter', name: 'SEMS SmartMeter Commercial', active: true, lastReadingKwh: activeDevices.length * 20.0),
       ];
     }
   }
@@ -41,15 +48,15 @@ class EnergyRepositoryImpl {
       
       double totalAllKwh = 0.0;
       for (var d in allConsumptions) {
-        totalAllKwh += (d['total_kwh'] ?? 0).toDouble();
+        totalAllKwh += (d['total_kwh'] as num?)?.toDouble() ?? 0.0;
       }
       return allConsumptions.map((d) {
-        double kwh = (d['total_kwh'] ?? 0).toDouble();
+        double kwh = (d['total_kwh'] as num?)?.toDouble() ?? 0.0;
         return DeviceConsumption(
-          deviceId: d['device_id'] ?? '',
-          deviceName: d['device_name'] ?? 'Device',
+          deviceId: d['device_id']?.toString() ?? '',
+          deviceName: d['device_name']?.toString() ?? 'Equipo',
           kwh: kwh,
-          cost: (d['cost_estimate_soles'] ?? 0).toDouble(),
+          cost: (d['cost_estimate_soles'] as num?)?.toDouble() ?? (kwh * 0.78),
           pct: totalAllKwh > 0 ? ((kwh / totalAllKwh) * 100).round() : 0,
         );
       }).toList();
@@ -62,7 +69,7 @@ class EnergyRepositoryImpl {
       List<DeviceConsumption> breakdown = [];
       
       for (int i = 0; i < activeDevices.length; i++) {
-        double kwh = 20.0 - (i * 2.5); // Max 20 kWh, ~15 soles
+        double kwh = 20.0 - (i * 2.5);
         if (kwh < 2.0) kwh = 2.0;
         totalAllKwh += kwh;
         breakdown.add(DeviceConsumption(
@@ -88,11 +95,12 @@ class EnergyRepositoryImpl {
     try {
       final user = await AuthRepositoryImpl.getMe();
       final res = await api.get('$_readingsBase/user/${user.id}', queryParameters: {'limit': 100});
-      if ((res.data as List).isEmpty) throw Exception();
+      final list = res.data as List;
+      if (list.isEmpty) throw Exception();
       
       double totalKwh = 0.0;
-      for (var r in res.data) {
-        totalKwh += (r['energy_kwh'] ?? 0).toDouble();
+      for (var r in list) {
+        totalKwh += (r['energy_kwh'] as num?)?.toDouble() ?? 0.0;
       }
       
       return ConsumptionSummary(
@@ -110,7 +118,7 @@ class EnergyRepositoryImpl {
       final devices = await DevicesRepositoryImpl.getDevices();
       final activeDevices = devices.where((d) => d.status == DeviceStatus.active).toList();
       if (activeDevices.isEmpty) {
-        return ConsumptionSummary(
+        return const ConsumptionSummary(
           weekly: [
              PeriodSummary(key: 'w1', label: 'Sem 1', kwh: 0, cost: 0),
              PeriodSummary(key: 'w2', label: 'Sem 2', kwh: 0, cost: 0),

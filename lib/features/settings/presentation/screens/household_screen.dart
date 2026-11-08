@@ -6,6 +6,7 @@ import 'package:flutter_application_1/core/widgets/sems_button.dart';
 import 'package:flutter_application_1/core/config/theme.dart';
 import 'package:flutter_application_1/core/config/api.dart';
 import 'package:flutter_application_1/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:flutter_application_1/features/analytics/data/repositories/analytics_repository_impl.dart';
 import 'package:flutter_application_1/core/widgets/loading_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,9 +32,22 @@ class _HouseholdScreenState extends State<HouseholdScreen> {
 
   Future<void> _loadData() async {
     final prefs = await SharedPreferences.getInstance();
+    String goal = '350';
+    try {
+      final user = await AuthRepositoryImpl.getMe();
+      final goalRes = await api.get('/api/v1/users/${user.id}/goals');
+      if (goalRes.data != null && goalRes.data['monthly_goal_kwh'] != null) {
+        goal = (goalRes.data['monthly_goal_kwh'] as num).toDouble().toStringAsFixed(0);
+      } else {
+        goal = prefs.getString('consumption_goal_${user.id}') ?? prefs.getString('consumption_goal') ?? '350';
+      }
+    } catch (_) {
+      goal = prefs.getString('consumption_goal') ?? '350';
+    }
+
     if (mounted) {
       setState(() {
-        _goalCtrl.text = prefs.getString('consumption_goal') ?? '350';
+        _goalCtrl.text = goal;
         _tariffCtrl.text = prefs.getString('energy_tariff') ?? '0.78';
       });
     }
@@ -140,11 +154,37 @@ class _HouseholdScreenState extends State<HouseholdScreen> {
                     child: SemsButton(
                       text: lang.t("Guardar meta", "Save goal"),
                       onPressed: () async {
+                        final val = _goalCtrl.text.trim();
+                        final dVal = double.tryParse(val) ?? 350.0;
                         final prefs = await SharedPreferences.getInstance();
-                        await prefs.setString('consumption_goal', _goalCtrl.text);
+                        try {
+                          final user = await AuthRepositoryImpl.getMe();
+                          await prefs.setString('consumption_goal_${user.id}', val);
+                          await prefs.setString('consumption_goal', val);
+                          // Reset alert status when user configures a new limit
+                          await prefs.remove('alert_status_goal_exceeded_${user.id}');
+                          await prefs.remove('alert_status_goal_warning_${user.id}');
+                          try {
+                            await api.put('/api/v1/users/${user.id}/goals', data: {
+                              'monthly_goal_kwh': dVal,
+                            });
+                          } catch (_) {}
+                        } catch (_) {
+                          await prefs.setString('consumption_goal', val);
+                        }
+
+                        AnalyticsRepositoryImpl.notifyDataChanged();
+
                         if (mounted) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text(lang.t("Meta guardada", "Goal saved"))),
+                            SnackBar(
+                              content: Text(
+                                lang.t(
+                                  "Meta de ${dVal.toStringAsFixed(0)} kWh guardada. ¡Alerta de límite actualizada!",
+                                  "Goal of ${dVal.toStringAsFixed(0)} kWh saved. Limit alert updated!"
+                                ),
+                              ),
+                            ),
                           );
                         }
                       },

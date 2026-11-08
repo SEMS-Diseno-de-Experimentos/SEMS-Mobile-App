@@ -13,8 +13,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final _emailCtrl = TextEditingController();
-  final _passCtrl = TextEditingController();
+  final _emailCtrl = TextEditingController(text: 'colladojeanfabio@gmail.com');
+  final _passCtrl = TextEditingController(text: 'disenio123');
   bool _error = false;
 
   @override
