@@ -1,4 +1,4 @@
-build_step: 211
-commit_ref: chore: create .env.example with API_URL placeholder
+build_step: 212
+commit_ref: chore: clean up analysis options and fix remaining dart analyzer hints
 author: dumbaskidd
-timestamp: 2026-11-08T15:30:30-05:00
+timestamp: 2026-11-08T10:43:59-05:00
