@@ -1,4 +1,4 @@
-build_step: 212
-commit_ref: chore: clean up analysis options and fix remaining dart analyzer hints
+build_step: 213
+commit_ref: docs: update README.md with architecture, features and setup instructions
 author: dumbaskidd
-timestamp: 2026-11-08T10:43:59-05:00
+timestamp: 2026-11-08T17:56:28-05:00
